@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F6EF"
+    tools:context=".AddAnimalsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarAnimals"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#F7F6EF"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_ios_new_24"
+        app:title="Add Animals"
+        app:titleTextColor="#000000" />
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="102dp"
+        android:layout_height="104dp"
+        android:layout_marginTop="32dp"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:background="#CBF451"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarAnimals"
+        app:srcCompat="@drawable/picture"
+        tools:srcCompat="@drawable/picture" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="26dp"
+        app:layout_constraintBottom_toTopOf="@+id/Nama"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarAnimals"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Nama"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#000000"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxStrokeColor="#000000"
+        app:boxStrokeWidth="2dp"
+        app:errorEnabled="true"
+        app:hintTextColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageview">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#000000"
+            android:drawablePadding="20dp"
+            android:hint="Name"
+            android:textColor="#000000"
+            android:textColorHint="#020202" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Jenis"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxStrokeColor="#000000"
+        app:boxStrokeWidth="2dp"
+        app:errorEnabled="true"
+        app:hintTextColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/Usia"
+        app:layout_constraintStart_toStartOf="@+id/Usia"
+        app:layout_constraintTop_toBottomOf="@+id/Nama">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Species"
+            android:inputType="text"
+            android:textColor="#000000" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Usia"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxStrokeColor="#000000"
+        app:boxStrokeWidth="2dp"
+        app:errorEnabled="true"
+        app:hintTextColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/Nama"
+        app:layout_constraintStart_toStartOf="@+id/Nama"
+        app:layout_constraintTop_toBottomOf="@+id/Jenis">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Age"
+            android:inputType="numberSigned"
+            android:textColor="#000000" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/Simpanhewan"
+        android:layout_width="197dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#365338"
+        android:text="Simpan"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/Usia"
+        app:layout_constraintStart_toStartOf="@+id/Usia"
+        app:layout_constraintTop_toBottomOf="@+id/Usia" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
